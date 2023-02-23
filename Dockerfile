@@ -11,4 +11,4 @@ RUN apk add --no-cache zerotier-one=${ZT_VERSION}
 COPY startup.sh /startup.sh
 EXPOSE 9993/udp
 
-ENTRYPOINT ["/startup.sh"]
+ENTRYPOINT ["/startup.sh -4 docker-zerotier-moon-production.up.railway.app -p 9993"]
