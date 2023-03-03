@@ -70,6 +70,7 @@ else
         echo -e "Your ZeroTier moon id is \033[0;31m$moon_id\033[0m, you could orbit moon using \033[0;31m\"zerotier-cli orbit $moon_id $moon_id\"\033[0m"
 	echo -e "stableEndpointsForSed:$stableEndpointsForSed"
 	cat /var/lib/zerotier-one/moon.json
+	wget -qO - icanhazip.com
 	exec /usr/sbin/zerotier-one
 fi
 
