@@ -70,7 +70,8 @@ else
         echo -e "Your ZeroTier moon id is \033[0;31m$moon_id\033[0m, you could orbit moon using \033[0;31m\"zerotier-cli orbit $moon_id $moon_id\"\033[0m"
 	echo -e "stableEndpointsForSed:$stableEndpointsForSed"
 	/usr/sbin/zerotier-one
-	/usr/sbin/zerotier-cli listmoons
+	listmoons=$(/usr/sbin/zerotier-cli listmoons)
+	echo -e "listmoons:"$listmoons
 	pkill zerotier-one
 	exec /usr/sbin/zerotier-one
 fi
